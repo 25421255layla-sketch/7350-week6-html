@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stellar Portfolio — Explore My Universe</title>
+        <!-- Internal Style Sheet (as taught in the tutorial) -->
+        <style>
+            p {
+                font-size: 18px;
+                color: #c4b5a0;
+                line-height: 1.8;
+            }
+        </style>
+        <!-- External Style Sheet (as taught in the tutorial) -->
+        <link rel="stylesheet" href="./style.css"/>
+    </head>
+    <body>
+
+        <!-- ============ NAVIGATION ============ -->
+        <div class="navbar">
+            <span class="nav-logo">&#10022; STELLAR</span>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#resources">Resources</a>
+                <a href="#video">Video</a>
+            </div>
+        </div>
+
+        <!-- ============ HERO SECTION ============ -->
+        <div class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-badge">AIDM7350 — Web Development</div>
+                <h1>Hello, I'm <span class="highlight">Layla LEI</span></h1>
+                <h2 class="standout">Digital Creator &amp; AI Explorer</h2>
+                <p class="hero-text">I craft stories through code, design, and curiosity. Welcome to my corner of the universe.</p>
+                <a href="#about" class="cta-button">Explore My World &#8595;</a>
+            </div>
+        </div>
+
+        <!-- ============ ABOUT SECTION ============ -->
+        <div class="section" id="about">
+            <div class="section-inner">
+                <h2>About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>A Passionate Learner</h3>
+                        <p>I am a postgraduate student at HKBU studying AI and Digital Media. My passion lies at the intersection of technology and creativity — where data meets design, and algorithms meet art.</p>
+                        <p>When I'm not coding, you'll find me photographing city skylines, experimenting with digital art, or sipping coffee while reading about the latest tech trends.</p>
+                        <h4>Currently focusing on:</h4>
+                        <p>Web development, machine learning, and interactive media design — blending technical skill with creative vision to build meaningful digital experiences.</p>
+                    </div>
+                    <div class="about-image-wrapper">
+                        <!-- Image from local/url (as taught in tutorial) -->
+                        <img src="https://picsum.photos/id/0/500/350" class="about-image" alt="Coding workspace">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ SKILLS SECTION ============ -->
+        <div class="section section-dark" id="skills">
+            <div class="section-inner">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">&#127912;</div>
+                        <h3>Design</h3>
+                        <p>Creating visually compelling interfaces with an eye for aesthetics and user experience.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">&#128187;</div>
+                        <h3>Development</h3>
+                        <p>Building responsive, fast, and accessible websites using modern web technologies.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">&#129302;</div>
+                        <h3>AI &amp; Data</h3>
+                        <p>Exploring machine learning, NLP, and data analytics to solve real-world problems.</p>
+                    </div>
+                </div>
+
+                <!-- Ordered List (as taught in tutorial) -->
+                <h3 class="list-title">Top Languages I Use</h3>
+                <ol class="styled-list">
+                    <li><span class="list-highlight">Python</span> — Data science and AI projects</li>
+                    <li><span class="list-highlight">JavaScript</span> — Interactive web applications</li>
+                    <li><span class="list-highlight">HTML &amp; CSS</span> — Beautiful, structured web pages</li>
+                </ol>
+
+                <!-- Unordered List (as taught in tutorial) -->
+                <h3 class="list-title">Tools in My Toolkit</h3>
+                <ul class="styled-list">
+                    <li>Visual Studio Code</li>
+                    <li>Figma &amp; Adobe Creative Suite</li>
+                    <li>GitHub &amp; Git Version Control</li>
+                    <li>Jupyter Notebook &amp; Google Colab</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ============ GALLERY SECTION ============ -->
+        <div class="section" id="gallery">
+            <div class="section-inner">
+                <h2>CSS Image Effects Gallery</h2>
+                <p class="section-subtitle">Hover over the images to see interactive CSS effects in action.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <!-- image1: border-radius: 50% (circle crop) -->
+                        <img src="https://picsum.photos/id/10/400/400" class="image1" alt="Forest Path">
+                        <div class="gallery-label">Circle Crop</div>
+                    </div>
+                    <div class="gallery-item">
+                        <!-- image2: border-radius: 30px (rounded corners) -->
+                        <img src="https://picsum.photos/id/29/400/400" class="image2" alt="Mountain Mist">
+                        <div class="gallery-label">Rounded Corners</div>
+                    </div>
+                    <div class="gallery-item">
+                        <!-- image3: opacity: 0.7 (transparency) -->
+                        <img src="https://picsum.photos/id/15/400/400" class="image3" alt="River View">
+                        <div class="gallery-label">Transparency</div>
+                    </div>
+                    <div class="gallery-item">
+                        <!-- image4: filter: grayscale(80%) -->
+                        <img src="https://picsum.photos/id/37/400/400" class="image4" alt="Cliff Coast">
+                        <div class="gallery-label">Grayscale</div>
+                    </div>
+                    <div class="gallery-item">
+                        <!-- image5: hover blur effect -->
+                        <img src="https://picsum.photos/id/1015/400/400" class="image5" alt="Mountain River">
+                        <div class="gallery-label">Hover to Blur &#10022;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ RESOURCES SECTION ============ -->
+        <div class="section section-dark" id="resources">
+            <div class="section-inner">
+                <h2>Useful Resources</h2>
+                <p class="section-subtitle">Here are some of my favorite learning platforms and references.</p>
+                <div class="resources-grid">
+                    <!-- Hyperlinks (as taught in tutorial) -->
+                    <a href="https://www.w3schools.com/" class="resource-card" target="_blank">
+                        <div class="resource-number">01</div>
+                        <h3>W3Schools</h3>
+                        <p>The go-to reference for HTML, CSS, and JavaScript tutorials with live editors.</p>
+                    </a>
+                    <a href="https://developer.mozilla.org/" class="resource-card" target="_blank">
+                        <div class="resource-number">02</div>
+                        <h3>MDN Web Docs</h3>
+                        <p>Comprehensive and authoritative documentation for web developers by Mozilla.</p>
+                    </a>
+                    <a href="https://github.com/" class="resource-card" target="_blank">
+                        <div class="resource-number">03</div>
+                        <h3>GitHub</h3>
+                        <p>Collaborate, share code, and deploy your projects for the whole world to see.</p>
+                    </a>
+                    <a href="https://www.hkbu.edu.hk/" class="resource-card" target="_blank">
+                        <div class="resource-number">04</div>
+                        <h3>HKBU</h3>
+                        <p>Hong Kong Baptist University — where my academic journey continues to thrive.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ VIDEO SECTION ============ -->
+        <div class="section" id="video">
+            <div class="section-inner">
+                <h2>Featured Video</h2>
+                <p class="section-subtitle">A great introduction to the exciting world of LLM Models.</p>
+                <!-- Embedded YouTube video using iframe (as taught in tutorial) -->
+                <div class="video-container">
+                    <iframe src="https://player.bilibili.com/player.html?bvid=BV13QnYzJE6q&page=1&high_quality=1&danmaku=0" width="800" height="450" scrolling="no" frameborder="no" allowfullscreen="true"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ FOOTER ============ -->
+        <div class="footer">
+            <div class="footer-inner">
+                <div class="footer-brand">&#10022; STELLAR PORTFOLIO</div>
+                <p class="footer-text">Designed with &#9829; by Layla LEI | AIDM7350 Web Development Assignment</p>
+                <p class="footer-text">&copy; 2026 All Rights Reserved</p>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,539 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #0b0e17;
+    color: #e0dcd4;
+    scroll-behavior: smooth;
+}
+
+
+/* h1: styled via tag selector */
+h1 {
+    color: #f5f0e8;
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+/* h2: styled via tag selector + hover */
+h2 {
+    color: #f5f0e8;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #e8a87c, #d4776b);
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+/* h2 hover effect (as taught in tutorial) */
+h2:hover {
+    color: #e8a87c;
+}
+
+h3 {
+    color: #d4c5a9;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+
+h4 {
+    color: #c49b6a;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    color: #e8a87c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #f0c29b;
+}
+
+/* ---------- CLASS SELECTORS (as taught) ---------- */
+
+/* .standout class — targets specific element */
+.standout {
+    color: #c49b6a;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.highlight {
+    color: #e8a87c;
+    background: linear-gradient(120deg, rgba(232, 168, 124, 0.15) 0%, transparent 60%);
+    padding: 0 8px;
+    border-radius: 4px;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: rgba(11, 14, 23, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(232, 168, 124, 0.1);
+}
+
+.nav-logo {
+    color: #e8a87c;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.nav-links a {
+    color: #a09888;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 32px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e8a87c;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(170deg, #0b0e17 0%, #1a1520 40%, #1c1428 70%, #0b0e17 100%);
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(ellipse 600px 400px at 20% 30%, rgba(232, 168, 124, 0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 500px 500px at 80% 60%, rgba(196, 155, 106, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 0 24px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #c49b6a;
+    border: 1px solid rgba(196, 155, 106, 0.3);
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-bottom: 28px;
+}
+
+.hero-text {
+    font-size: 20px;
+    color: #a09888;
+    max-width: 520px;
+    margin: 0 auto 36px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 14px 36px;
+    background: linear-gradient(135deg, #e8a87c, #d4776b);
+    color: #0b0e17;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(232, 168, 124, 0.25);
+    color: #0b0e17;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+    padding: 100px 24px;
+}
+
+.section-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-dark {
+    background: #0f1220;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #8a7e70;
+    margin-bottom: 40px;
+}
+
+/* ---------- ABOUT ---------- */
+.about-grid {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    margin-top: 36px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-image-wrapper {
+    flex: 0 0 360px;
+}
+
+.about-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 2px solid rgba(232, 168, 124, 0.15);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.03);
+    border-color: rgba(232, 168, 124, 0.4);
+}
+
+/* ---------- SKILLS ---------- */
+.skills-grid {
+    display: flex;
+    gap: 24px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    flex: 1;
+    min-width: 240px;
+    background: rgba(245, 240, 232, 0.03);
+    border: 1px solid rgba(232, 168, 124, 0.1);
+    border-radius: 16px;
+    padding: 36px 28px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(232, 168, 124, 0.3);
+    background: rgba(245, 240, 232, 0.05);
+}
+
+.skill-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+/* ---------- LISTS (Ordered & Unordered as taught) ---------- */
+.list-title {
+    color: #e8a87c;
+    margin-top: 48px;
+    font-size: 20px;
+}
+
+.styled-list {
+    margin: 16px 0 8px 28px;
+    line-height: 2.2;
+}
+
+.styled-list li {
+    color: #b5a998;
+    font-size: 17px;
+    padding-left: 8px;
+}
+
+.styled-list li::marker {
+    color: #e8a87c;
+}
+
+.list-highlight {
+    color: #f5f0e8;
+    font-weight: 600;
+}
+
+/* ======================================================
+   GALLERY — Image CSS Effects
+   Demonstrates: border-radius, opacity, filter, hover
+   ====================================================== */
+.gallery-grid {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    text-align: center;
+    flex: 0 0 170px;
+}
+
+.gallery-item img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.gallery-label {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #8a7e70;
+    letter-spacing: 0.5px;
+}
+
+/* Image Effect 1: Circle crop (border-radius: 50%) */
+.image1 {
+    border-radius: 50%;
+}
+
+/* Image Effect 2: Rounded corners (border-radius: 30px) */
+.image2 {
+    border-radius: 30px;
+}
+
+/* Image Effect 3: Transparency (opacity) */
+.image3 {
+    opacity: 0.7;
+}
+
+/* Image Effect 4: Grayscale filter */
+.image4 {
+    filter: grayscale(80%);
+}
+
+/* Image Effect 5: Hover blur effect */
+.image5:hover {
+    filter: blur(5px);
+}
+
+/* ---------- RESOURCES ---------- */
+.resources-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.resource-card {
+    flex: 1;
+    min-width: 200px;
+    background: rgba(245, 240, 232, 0.03);
+    border: 1px solid rgba(232, 168, 124, 0.08);
+    border-radius: 14px;
+    padding: 32px 24px;
+    text-decoration: none;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+    display: block;
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(232, 168, 124, 0.35);
+    background: rgba(245, 240, 232, 0.05);
+}
+
+.resource-card h3 {
+    color: #f5f0e8;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.resource-card p {
+    font-size: 15px;
+    color: #8a7e70;
+}
+
+.resource-number {
+    font-size: 32px;
+    font-weight: 800;
+    color: rgba(232, 168, 124, 0.15);
+    line-height: 1;
+}
+
+/* ---------- VIDEO ---------- */
+.video-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    padding: 60px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(232, 168, 124, 0.08);
+    background: #080a12;
+}
+
+.footer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #e8a87c;
+    margin-bottom: 16px;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #5a5248;
+    margin-bottom: 4px;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .standout {
+        font-size: 18px;
+    }
+
+    .navbar {
+        padding: 14px 20px;
+    }
+
+    .nav-links a {
+        margin-left: 16px;
+        font-size: 12px;
+    }
+
+    .about-grid {
+        flex-direction: column;
+    }
+
+    .about-image-wrapper {
+        flex: 1;
+        width: 100%;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        gap: 16px;
+    }
+
+    .gallery-item {
+        flex: 0 0 140px;
+    }
+
+    .gallery-item img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .resources-grid {
+        flex-direction: column;
+    }
+
+    .video-container iframe {
+        height: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .hero-badge {
+        font-size: 10px;
+        padding: 6px 14px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .section {
+        padding: 60px 16px;
+    }
+}
